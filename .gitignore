@@ -1,5 +1,6 @@
 mog_v2_events.csv
 examples/
+*.ipynb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
