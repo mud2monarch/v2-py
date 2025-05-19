@@ -59,10 +59,15 @@ Users will be able to:
 - [ ] Performance optimizations
 
 ## Notes
-- Use Decimal for precise calculations
+- Use native ints
 - Consider adding logging
 - Focus on correctness first, then optimization
 - Document key methods and classes
+
+## Future Thoughts
+- Add a pool name field
+- Consider actually recording the V2State, or a pointer to the State?, of each row in a column of the DataFrame. This would help with things like removing states. That said, `__eq__` for V2State just checks equality of all attributes so it might be redundant and inefficient for that specific purpose
+- V2Pool needs a last_state: V2State that gets constantly recorded and tracked so that I can use it with update_state(last_state: V2State, event: V2Event)
 
 ```prompt
 
